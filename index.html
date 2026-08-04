@@ -17,7 +17,7 @@
                 OLAVARRÍA 🇦🇷</span>
             <h1 class="text-4xl sm:text-5xl font-extrabold mt-4 mb-4 tracking-tight">QuieroMoverme</h1>
             <p class="text-lg sm:text-xl text-sky-50 leading-relaxed font-medium">
-                Centralizamos toda la oferta deportiva y de movimiento de la ciudad para fomentar
+                Centralizamos toda la oferta deportiva y de movimiento de la ciudad y la zona para fomentar
                 una vida activa.
             </p>
 
@@ -167,22 +167,24 @@
 
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 max-w-xl mx-auto">
                 <input type="hidden" name="access_key" value="776bc1b9-fbc3-4709-ba2b-a458695ebd4a">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <input type="hidden" name="subject" value="Nueva propuesta para QuieroMoverme">
+                <input type="hidden" name="redirect" value="https://quieromoverme.com/gracias.html">
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 mb-2">¿Te interesó la propuesta? *</label>
                     <select name="interes" required
                         class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:outline-none bg-white">
                         <option value="">Selecciona una opción</option>
-                        <option value="Si, me re interesa">Sí, me interesa</option>
-                        <option value="Si, me re interesa">Sí, me interesa y voy a actualizar mis datos regularmente
-                        </option>
-                        <option value="Quiero colaborar">Si, me interesa y quiero colaborar con información de eventos
-                        </option>
+                        <option value="Quiero aparecer en la plataforma">✅ Quiero aparecer en la plataforma</option>
+                        <option value="Quiero colaborar">🤝 Quiero colaborar</option>
+                        <option value="Quiero enterarme cuando salga">🚀 Quiero enterarme cuando salga</option>
+                        <option value="Quiero difundir el proyecto">📢 Quiero difundir el proyecto</option>
                     </select>
                 </div>
 
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 mb-2">Nombre y Apellido *</label>
-                    <input type="text" name="nombre" required placeholder="Ej: Seba Rosende" maxlength="60"
+                    <input type="text" name="nombre" required placeholder="Ej: Seba Rosende" maxlength="40"
                         class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:outline-none">
                 </div>
 
@@ -200,17 +202,21 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-semibold text-slate-700 mb-2">¿Trabaja en algún lugar? - ¿Qué
-                        actividades?</label>
-                    <textarea name="lugar_y_actividades" rows="3" maxlength="400"
-                        placeholder="Ej: Club / Gimnasio / Centro - Doy clases de..."
-                        class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:outline-none"></textarea>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">¿Qué representás? *</label>
+                    <select name="representa" required
+                        class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:outline-none bg-white">
+                        <option value="">Selecciona una opción</option>
+                        <option value="Club o institución">🏟️ Club o institución</option>
+                        <option value="Profesor / Instructor">👨‍🏫 Profesor / Instructor</option>
+                        <option value="Gimnasio o estudio">💪 Gimnasio o estudio</option>
+                        <option value="Agrupación">👥 Agrupación</option>
+                        <option value="Otro">📌 Otros (podés aclararlo en comentarios adicionales)</option>
+                    </select>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-semibold text-slate-700 mb-2">Ubicación *</label>
-                    <input type="text" name="ubicacion" required placeholder="Enlace de google Maps o dirección."
-                        maxlength="300"
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">Ubicación</label>
+                    <input type="text" name="ubicacion" placeholder="Enlace de google Maps o dirección." maxlength="250"
                         class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:outline-none">
                 </div>
 
@@ -223,7 +229,7 @@
 
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 mb-2">Comentarios adicionales</label>
-                    <textarea name="comentarios" rows="3" maxlength="500"
+                    <textarea name="comentarios" rows="3" maxlength="200"
                         placeholder="Cualquier información extra que quieras compartir..."
                         class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:outline-none"></textarea>
                 </div>
@@ -232,6 +238,10 @@
                     class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200">
                     Enviar información
                 </button>
+
+                <p class="text-xs text-slate-400 text-center">
+                    🔒 Usaremos esta información únicamente para contactarte y sumar tu actividad a QuieroMoverme.
+                </p>
 
             </form>
         </section>
@@ -282,7 +292,7 @@
                     </span>
                     <div class="text-left">
                         <p class="text-xs text-slate-500">Email</p>
-                        <p class="text-sm font-semibold">sebastianrhds@gmail.com</p>
+                        <p class="text-sm font-semibold">contacto@quieromoverme.com</p>
                     </div>
                 </a>
 
