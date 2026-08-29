@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuieroMoverme | Portal Deportivo Colaborativo y Gratuito</title>
+    <title>QuieroMoverme | Ecosistema Digital de Movimiento — Olavarría</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
+    <!-- HEADER / HERO -->
     <header class="bg-sky-600 text-white py-16 px-4 text-center border-b-4 border-sky-400 shadow-md">
         <div class="max-w-3xl mx-auto">
             <span
@@ -17,16 +18,15 @@
                 OLAVARRÍA 🇦🇷</span>
             <h1 class="text-4xl sm:text-5xl font-extrabold mt-4 mb-4 tracking-tight">QuieroMoverme</h1>
             <p class="text-lg sm:text-xl text-sky-50 leading-relaxed font-medium">
-                Centralizamos toda la oferta deportiva y de movimiento de la ciudad y la zona para fomentar
-                una vida activa.
+                Centralizamos la oferta deportiva y de movimiento de la ciudad y la zona para fomentar una vida activa y
+                conectar a todo el ecosistema.
             </p>
-
         </div>
     </header>
 
-
     <main class="max-w-4xl mx-auto px-4 py-12 space-y-12">
 
+        <!-- 1. PRESENTACIÓN -->
         <section
             class="bg-gradient-to-r from-sky-50 to-white rounded-2xl shadow-sm p-8 border-l-4 border-sky-600 border-t border-r border-b border-slate-200">
             <div class="flex flex-col sm:flex-row items-center gap-6">
@@ -36,89 +36,219 @@
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-2">Hola, soy el creador de este proyecto</h2>
                     <p class="text-slate-600 leading-relaxed text-base">
-                        Mi nombre es Seba, <strong>informático y deportista</strong>. Mi objetivo es unificar mis dos
-                        grandes
-                        pasiones
-                        —la tecnología y el deporte— para armar este portal web destinado a nuestra ciudad.
+                        Mi nombre es Seba, <strong>informático y deportista</strong>. Mi objetivo es unir tecnología +
+                        deporte en esta plataforma nacida en Olavarría, facilitando el acceso a la actividad física y
+                        conectando a las personas con todo el ecosistema deportivo local.
                     </p>
                 </div>
             </div>
-
         </section>
 
-        <section class="bg-white rounded-2xl shadow-sm p-8 border border-slate-200">
-            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                🌐 ¿Por qué una Página Web y no Redes Sociales?
-            </h2>
-            <ul class="space-y-3 text-slate-600 text-base">
-                <li class="flex items-start gap-3">
-                    <span class="text-sky-600 font-bold">✔</span>
-                    <span><strong>Acceso público, libre y gratuito:</strong> Sin necesidad de crear cuentas,
-                        registrarse, ni validarse. Abierto a todos, sin importar género, edad o
-                        condición.</span>
+        <!-- 2. ¿POR QUÉ QUIEROMOVERME? -->
+        <section class="bg-white rounded-2xl shadow-sm p-8 border border-slate-200 space-y-6">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-2 flex items-center gap-2">
+                    🌐 ¿Por qué QuieroMoverme?
+                </h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Una plataforma de <strong>acceso público, libre y gratuito</strong>, sin necesidad de crear cuentas
+                    ni
+                    registrarse. Un espacio abierto a todos para acceder y organizar la información que hoy se diluye
+                    en redes sociales.
+                </p>
+            </div>
+
+            <ul class="grid sm:grid-cols-2 gap-4 text-slate-600 text-base">
+                <li class="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="text-sky-600 font-bold text-xl">🔓</span>
+                    <span><strong>Acceso sin registro:</strong> Libre, gratuito e inclusivo para toda la
+                        comunidad.</span>
                 </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-sky-600 font-bold">✔</span>
-                    <span><strong>Sin pérdida de información:</strong> Con más de 100 disciplinas y más de 150 sedes
-                        (clubes, gimnasios, CEF, centros, agrupaciones, complejos, canchas y profesores), en las redes
-                        la información se diluye. Aquí se organiza de forma amigable.</span>
+                <li class="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="text-sky-600 font-bold text-xl">🏃</span>
+                    <span><strong>+100 Disciplinas:</strong> Deportes tradicionales, fitness, danzas y propuestas
+                        emergentes.</span>
                 </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-sky-600 font-bold">✔</span>
-                    <span><strong>Geolocalización en Mapa:</strong> Para encontrar de forma visual exactamente dónde
-                        queda cada sede.</span>
+                <li class="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="text-sky-600 font-bold text-xl">🏟️</span>
+                    <span><strong>+150 Sedes:</strong> Clubes, gimnasios, CEF, centros, agrupaciones, complejos, canchas
+                        y profesionales.</span>
                 </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-sky-600 font-bold">✔</span>
-                    <span><strong>Asistente de IA:</strong> Un chat inteligente para asesorar de
-                        forma personalizada.</span>
+                <li class="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="text-sky-600 font-bold text-xl">🗺️</span>
+                    <span><strong>Geolocalización y Mapa:</strong> Encontrá de forma visual dónde queda exactamente cada
+                        sede.</span>
                 </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-sky-600 font-bold">✔</span>
-                    <span><strong>Descripción de cada disciplina:</strong> Contará con una breve
-                        descripción detallada del deporte o actividad, permitiendo conocer de
-                        qué se trata y donde se desarrolla.</span>
+                <li class="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="text-sky-600 font-bold text-xl">ℹ️</span>
+                    <span><strong>Información de cada disciplina:</strong> Detalles de cada deporte o actividad para
+                        saber de qué se trata.</span>
                 </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-sky-600 font-bold">✔</span>
-                    <span><strong>Calendario de Eventos:</strong> Contará con una sección
-                        específica de eventos.</span>
+                <li class="flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="text-sky-600 font-bold text-xl">📅</span>
+                    <span><strong>Calendario de Eventos:</strong> Sección destacada para torneos, competencias, carreras
+                        y encuentros.</span>
                 </li>
             </ul>
+
+            <!-- Chatbot con IA Activo -->
+            <div class="bg-gradient-to-r from-sky-600 to-sky-700 text-white p-5 rounded-xl shadow-sm space-y-3">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl">🤖</span>
+                        <h3 class="font-bold text-base sm:text-lg">Asistente Virtual con IA</h3>
+                    </div>
+
+                </div>
+                <p class="text-sky-50 text-sm leading-relaxed">
+                    Incorporamos un <strong>chatbot con inteligencia artificial</strong> que asesora y orienta a los
+                    usuarios para encontrar la disciplina, sede o actividad ideal según sus necesidades:
+                </p>
+                <div class="flex flex-wrap gap-2 text-xs pt-1">
+                    <span class="bg-white/15 border border-white/25 px-3 py-1.5 rounded-lg font-medium">💬 “Quiero hacer
+                        deporte cerca”</span>
+                    <span class="bg-white/15 border border-white/25 px-3 py-1.5 rounded-lg font-medium">💬 “Busco una
+                        actividad para mi hijo”</span>
+                    <span class="bg-white/15 border border-white/25 px-3 py-1.5 rounded-lg font-medium">💬 “Quiero
+                        empezar un deporte”</span>
+                </div>
+            </div>
+
+            <!-- Nuevas Conexiones del Ecosistema -->
+            <div class="pt-4 border-t border-slate-100">
+                <h3 class="text-lg font-bold text-slate-900 mb-4">Nuevas conexiones que integran el ecosistema:</h3>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="bg-sky-50/60 p-4 rounded-xl border border-sky-100">
+                        <div class="text-2xl mb-1">🛍️</div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-1">Comercios Deportivos</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Conexión con tiendas y marcas para ofrecer
+                            promociones, beneficios y productos afines.</p>
+                    </div>
+                    <div class="bg-sky-50/60 p-4 rounded-xl border border-sky-100">
+                        <div class="text-2xl mb-1">🩺</div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-1">Salud y Bienestar</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Integración con nutricionistas, kinesiólogos,
+                            traumatólogos y profesionales de la salud.</p>
+                    </div>
+                    <div class="bg-sky-50/60 p-4 rounded-xl border border-sky-100">
+                        <div class="text-2xl mb-1">💼</div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-1">Oportunidades Laborales</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Nexo futuro entre instituciones que buscan
+                            profesores e instructores con búsqueda laboral.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="bg-white rounded-2xl shadow-sm p-8 border border-slate-200">
-            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-                🎯 Nuestro Enfoque y Propuesta
-            </h2>
-            <div class="space-y-4 text-slate-600 text-base leading-relaxed">
+        <!-- 3. NUEVO CONCEPTO: ECOSISTEMA EN MOVIMIENTO -->
+        <section class="bg-white rounded-2xl shadow-sm p-8 border border-slate-200 space-y-6">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    ECOSISTEMA DIGITAL
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2 mb-2">
+                    ⚡ Ecosistema en Movimiento
+                </h2>
+                <p class="text-slate-600 text-base">
+                    QuieroMoverme no es solamente un directorio: es una red integrada que conecta a toda la comunidad
+                    alrededor del movimiento.
+                </p>
+            </div>
 
-                <p>
-                    Hacemos foco especial en dar a conocer <strong>nuevas actividades que emergen, disciplinas poco
-                        convencionales, profesionales que están iniciando, clubes barriales y sedes pequeñas</strong>
-                    que necesitan afluencia de personas; así como también acompañar a las sedes e instituciones ya
-                    establecidas que, aunque cuentan con trayectoria, continúan vigentes renovándose con nuevas
-                    propuestas y eventos habituales.
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+                <div
+                    class="p-5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors">
+                    <div class="text-3xl mb-2">🏃</div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">Personas</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Descubren actividades y encuentran opciones
+                        cercanas para mantenerse activas.</p>
+                </div>
+
+                <div
+                    class="p-5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors">
+                    <div class="text-3xl mb-2">🏟️</div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">Instituciones y Profesionales</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Obtienen visibilidad continua y conectan con
+                        nuevas personas interesadas.</p>
+                </div>
+
+                <div
+                    class="p-5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors">
+                    <div class="text-3xl mb-2">🛍️</div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">Comercios</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Ofrecen beneficios y conectan de forma directa con
+                        la comunidad deportiva.</p>
+                </div>
+
+                <div
+                    class="p-5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors">
+                    <div class="text-3xl mb-2">🩺</div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">Salud</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Profesionales enfocados en nutrición, prevención y
+                        bienestar físico.</p>
+                </div>
+
+                <div
+                    class="p-5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors">
+                    <div class="text-3xl mb-2">💼</div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">Trabajo</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Conexión de oportunidades laborales entre
+                        instituciones y profesores/instructores.</p>
+                </div>
+
+                <div
+                    class="p-5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors">
+                    <div class="text-3xl mb-2">📅</div>
+                    <h3 class="font-bold text-slate-900 text-base mb-1">Eventos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Visibilidad y difusión de competencias, torneos,
+                        encuentros y carreras.</p>
+                </div>
+
+                <div
+                    class="sm:col-span-2 lg:col-span-3 p-5 rounded-xl bg-sky-50 border border-sky-200 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                    <div class="text-4xl shrink-0">🚀</div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base mb-1">Nuevas Oportunidades</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Visibilidad para actividades emergentes,
+                            espacios pequeños y posibilidades de nuevos emprendimientos locales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ACTIVIDADES EMERGENTES Y NUEVAS OPORTUNIDADES -->
+        <section class="bg-white rounded-2xl shadow-sm p-8 border border-slate-200 space-y-4">
+            <div class="flex items-center gap-3 mb-1">
+                <span class="text-3xl">💡</span>
+                <h2 class="text-2xl font-bold text-slate-900">Actividades Emergentes y Oportunidades</h2>
+            </div>
+            <p class="text-slate-600 text-base leading-relaxed">
+                QuieroMoverme busca dar visibilidad a <strong>disciplinas poco convencionales, actividades emergentes,
+                    nuevos profesionales, clubes barriales y espacios pequeños</strong> que necesitan afluencia de
+                personas, junto a las instituciones consolidadas.
+            </p>
+            <div
+                class="bg-slate-50 p-6 rounded-xl border-l-4 border-sky-600 border-t border-r border-b border-slate-200 space-y-2">
+                <h3 class="font-bold text-slate-900 text-base">Detectar oportunidades en la comunidad</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Si una disciplina genera interés en la comunidad pero cuenta con poca oferta disponible, la
+                    información centralizada de la plataforma puede representar una valiosa oportunidad para
+                    <strong>nuevos profesores, gimnasios, clubes, emprendimientos e inversores</strong>.
                 </p>
-                <p>
-                    <strong>No somos un portal de noticias tradicional:</strong> funcionamos como un nexo directo y
-                    colaborativo entre la comunidad y las sedes deportivas.
-                </p>
-                <p>
-                    Construyamos este espacio en comunidad: <strong> un lugar abierto y colaborativo</strong> donde cada
-                    aporte suma para mantener vivas,
-                    actualizadas y en movimiento todas las actividades de la ciudad.
+                <p class="text-slate-400 text-xs italic pt-1">
+                    📌 Presentado como parte de la visión y potencial futuro de desarrollo de la plataforma.
                 </p>
             </div>
         </section>
 
+        <!-- 5. IMPACTO LOCAL -->
         <section class="grid sm:grid-cols-2 gap-6">
             <div class="bg-white rounded-2xl shadow-sm p-6 border border-slate-200">
                 <div class="text-3xl mb-3">🚀</div>
                 <h3 class="text-xl font-bold text-slate-900 mb-2">Visibilidad e Inclusión</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">
-                    Mostrar que más allá de los deportes clásicos, existe un abanico enorme de opciones
-                    en distintos puntos de la ciudad, integrando a todos sin exclusiones.
+                    Mostrar que más allá de los deportes tradicionales, existe un abanico enorme de opciones en toda la
+                    ciudad, integrando a todos sin exclusiones.
                 </p>
             </div>
 
@@ -126,42 +256,36 @@
                 <div class="text-3xl mb-3">🛡️</div>
                 <h3 class="text-xl font-bold text-slate-900 mb-2">Contra el Sedentarismo</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">
-                    Motivar a niños y adultos a realizar actividades físicas, reduciendo el apego excesivo a la
-                    tecnología y mejorando la salud comunitaria.
+                    Facilitar el acceso a actividades físicas y motivar una vida más activa en todas las edades.
                 </p>
-
             </div>
 
             <div class="bg-white rounded-2xl shadow-sm p-6 border border-slate-200">
                 <div class="text-3xl mb-3">📈</div>
                 <h3 class="text-xl font-bold text-slate-900 mb-2">Crecimiento Local</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">
-                    Impulsar el movimiento financiero en el ecosistema deportivo, mediante una mayor
-                    afluencia de personas, potenciando tanto las matrículas cotidianas como el consumo y la economía
-                    circular en cada evento y torneo de la región.
-
+                    Favorecer la circulación económica dentro del ecosistema: personas → actividades → instituciones →
+                    comercios → eventos.
                 </p>
-
-
             </div>
 
             <div class="bg-white rounded-2xl shadow-sm p-6 border border-slate-200">
                 <div class="text-3xl mb-3">🤝</div>
                 <h3 class="text-xl font-bold text-slate-900 mb-2">Nexo Comunitario</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">
-                    Actuar como puente directo y gratuito entre las personas y las sedes, facilitando disciplinas,
-                    contactos y localización.
+                    Conectar directamente a la comunidad con quienes ofrecen actividades, disciplinas y servicios
+                    deportivos.
                 </p>
-            </div>
             </div>
         </section>
 
+        <!-- 7. SUMÁ TU ESPACIO O ACTIVIDAD -->
         <section class="bg-white rounded-2xl shadow-md p-8 border border-slate-200">
             <div class="text-center max-w-xl mx-auto mb-8">
                 <h2 class="text-2xl font-bold text-slate-900 mb-2">Sumá tu espacio o actividad gratis</h2>
                 <p class="text-slate-600 text-sm">
                     Completá este formulario si te interesó la propuesta y querés integrar tu disciplina, club,
-                    gimnasio, centro o proyecto al portal web de forma totalmente <strong>gratuita</strong>.
+                    gimnasio, comercio o espacio al portal web de forma totalmente <strong>gratuita</strong>.
                 </p>
             </div>
 
@@ -197,7 +321,7 @@
                 <div>
                     <label class="block text-sm font-semibold text-slate-700 mb-2">Actividades que desarrolla *</label>
                     <input type="text" name="actividades" required
-                        placeholder="Ej: Básquet infantil, Yoga, Danzas, Trekking..." maxlength="120"
+                        placeholder="Ej: Básquet infantil, Yoga, Danzas, Kinesiología, Indumentaria..." maxlength="120"
                         class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:outline-none">
                 </div>
 
@@ -210,7 +334,10 @@
                         <option value="Profesor / Instructor">👨‍🏫 Profesor / Instructor</option>
                         <option value="Gimnasio o estudio">💪 Gimnasio o estudio</option>
                         <option value="Agrupación">👥 Agrupación</option>
-                        <option value="Otro">📌 Otros (podés aclararlo en comentarios adicionales)</option>
+                        <option value="Profesional de salud">🩺 Profesional de salud</option>
+                        <option value="Comercio deportivo">🛍️ Comercio deportivo</option>
+                        <option value="Organizador de eventos">📅 Organizador de eventos</option>
+                        <option value="Otro">📌 Otro (podés aclararlo en comentarios)</option>
                     </select>
                 </div>
 
@@ -235,7 +362,7 @@
                 </div>
 
                 <button type="submit"
-                    class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200">
+                    class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3.5 px-6 rounded-lg transition-colors duration-200 shadow-sm">
                     Quiero sumarme
                 </button>
 
@@ -244,6 +371,19 @@
                 </p>
 
             </form>
+        </section>
+
+        <!-- 8. CIERRE / CTA -->
+        <section class="text-center py-6 px-4 space-y-4">
+            <div class="space-y-1 text-slate-800 font-bold text-lg sm:text-xl">
+                <p>Encontrá dónde moverte.</p>
+                <p>Descubrí nuevas actividades.</p>
+                <p>Conectá con tu comunidad.</p>
+            </div>
+
+            <p class="text-slate-500 text-xs font-bold uppercase tracking-widest pt-2">
+                QuieroMoverme — Olavarría en movimiento.
+            </p>
         </section>
 
     </main>
@@ -256,8 +396,8 @@
             <div class="text-center mb-10">
                 <h2 class="text-2xl font-extrabold text-white tracking-tight mb-2">QuieroMoverme</h2>
                 <p class="text-slate-400 text-sm max-w-md mx-auto">
-                    Portal deportivo colaborativo y gratuito para Olavarría y la zona. Centraliza toda la oferta de
-                    movimiento de la ciudad.
+                    Plataforma digital de movimiento para Olavarría y la zona. Centraliza la oferta deportiva y conecta
+                    a todo el ecosistema local.
                 </p>
             </div>
 
@@ -275,11 +415,9 @@
                     </span>
                     <div class="text-left">
                         <p class="text-xs text-slate-500">Instagram</p>
-
+                        <p class="text-sm font-semibold">@sebastianrhds</p>
                     </div>
                 </a>
-
-
 
                 <a href="mailto:contacto@quieromoverme.com"
                     class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-200 group">
