@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sumate a QuieroMoverme | Convocatoria Redes y Comunicación</title>
+    <meta name="description"
+        content="Convocatoria colaborativa para sumar a una persona en comunicación y gestión de redes sociales en QuieroMoverme, Olavarría.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Estilos visuales para tarjetas seleccionables (radios y checks) */
+        .select-card input:checked+.card-box {
+            border-color: #0284c7;
+            background-color: #f0f9ff;
+            color: #0369a1;
+            box-shadow: 0 2px 8px rgba(2, 132, 199, 0.12);
+        }
+
+        .select-card input:checked+.card-box .radio-dot {
+            border-color: #0284c7;
+            background-color: #0284c7;
+            box-shadow: inset 0 0 0 3px #ffffff;
+        }
+
+        .select-card input:checked+.card-box .check-dot {
+            border-color: #0284c7;
+            background-color: #0284c7;
+            color: #ffffff;
+        }
+
+        .input-error {
+            border-color: #f43f5e !important;
+            background-color: #fff1f2 !important;
+        }
+
+        .input-error:focus {
+            box-shadow: 0 0 0 2px #fb7185 !important;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-sky-500 selection:text-white">
+
+    <!-- NAVEGACIÓN SUPERIOR / VUELTA AL SITIO -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 transition-shadow">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-3">
+            <a href="index.html"
+                class="inline-flex items-center gap-2 text-sm font-bold text-sky-700 hover:text-sky-900 transition-colors group">
+                <span class="text-base sm:text-lg transition-transform group-hover:-translate-x-1 duration-200">←</span>
+                <span>Volver al proyecto</span>
+            </a>
+
+            <a href="https://www.quieromoverme.com/" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 bg-sky-50 hover:bg-sky-100 text-sky-700 hover:text-sky-900 border border-sky-200 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition-all shadow-sm">
+                <span>Ver web actual</span>
+                <span class="text-xs">↗</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HEADER / HERO COMPACTO Y MOTIVADOR -->
+    <header class="relative overflow-hidden bg-gradient-to-br from-sky-700 via-sky-600 to-cyan-500 text-white">
+        <!-- Decoración sutil de fondo -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full border-[30px] border-white"></div>
+            <div class="absolute -bottom-20 -left-20 w-64 h-64 rounded-full border-[30px] border-white"></div>
+        </div>
+
+        <div class="relative max-w-2xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
+            <!-- Badge / Etiqueta superior -->
+            <span
+                class="inline-flex items-center gap-1.5 bg-white/15 border border-white/25 rounded-full px-3.5 py-1 text-xs sm:text-sm font-bold tracking-wider uppercase shadow-sm">
+                📍 Olavarría y la zona · Convocatoria colaborativa
+            </span>
+
+            <!-- Título principal -->
+            <h1 class="text-3xl sm:text-5xl font-black tracking-tight mt-4 leading-tight">
+                Sumate a QuieroMoverme
+            </h1>
+
+            <!-- Subtítulo -->
+            <p class="mt-3 text-lg sm:text-xl text-sky-100 font-semibold max-w-xl mx-auto leading-snug">
+                ¿Te gusta el deporte, las redes sociales y la posibilidad de construir algo bueno para nuestra
+                comunidad?
+            </p>
+
+            <!-- Resumen ágil del proyecto y la propuesta -->
+            <div class="mt-5 text-sm sm:text-base text-sky-50 leading-relaxed max-w-xl mx-auto space-y-2.5">
+                <p>
+                    <strong>QuieroMoverme</strong> conecta a la comunidad con deportes, sedes y actividades físicas de
+                    Olavarría. Estoy a cargo de la programación web y busco a alguien que lidere las redes sociales
+                    para contagiar movimiento.
+                </p>
+                <div class="inline-flex flex-wrap items-center justify-center gap-2 pt-2 text-xs">
+                    <span class="bg-white/15 border border-white/20 px-3 py-1 rounded-full font-medium">🤝 Voluntario y
+                        comunitario</span>
+                    <span class="bg-white/15 border border-white/20 px-3 py-1 rounded-full font-medium">⏱️ ~8 hs
+                        semanales</span>
+                    <span class="bg-white/15 border border-white/20 px-3 py-1 rounded-full font-medium">🌱 Aprendizaje
+                        mutuo</span>
+                </div>
+
+                <!-- Botón para visitar la landing actual en nueva pestaña -->
+                <div class="pt-4 flex justify-center">
+                    <a href="https://www.quieromoverme.com/" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 bg-white text-sky-700 hover:bg-sky-50 font-extrabold px-5 py-2.5 rounded-xl text-xs sm:text-sm shadow-md hover:shadow-lg transition-all group">
+                        <span>Visitar la web actual</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-6 flex-grow w-full">
+
+        <!-- AVISO DE TRANSPARENCIA -->
+        <section
+            class="rounded-2xl p-4 sm:p-5 bg-amber-50/90 border border-amber-200 text-slate-800 text-xs sm:text-sm leading-relaxed space-y-1">
+            <p class="font-bold text-amber-950 flex items-center gap-2">
+                <span>💡</span> Una propuesta voluntaria y comunitaria
+            </p>
+            <p class="text-amber-900/90">
+                Es un proyecto independiente y gratuito para los usuarios, sin remuneración económica inicial para esta
+                colaboración. La dedicación (~8 hs semanales) y objetivos se coordinan juntos con metas realistas. No se
+                promete remuneración futura ni participación societaria.
+            </p>
+        </section>
+
+        <!-- MENSAJE DE ÉXITO (Visible tras el envío exitoso) -->
+        <div id="mensajeExito"
+            class="hidden bg-white rounded-3xl p-8 sm:p-12 border-2 border-emerald-400 shadow-xl text-center space-y-5 animate-fade-in">
+            <div
+                class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl font-black">
+                ✓
+            </div>
+            <div class="space-y-2">
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900">
+                    ¡Gracias por tu interés en QuieroMoverme!
+                </h2>
+                <p class="text-base text-slate-600 max-w-lg mx-auto leading-relaxed">
+                    Recibimos tu postulación. Vamos a revisarla y, si vemos que podemos construir algo juntos, nos
+                    pondremos en contacto con vos.
+                </p>
+            </div>
+            <div class="pt-2">
+                <a href="index.html"
+                    class="inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all text-sm">
+                    Volver al proyecto
+                </a>
+            </div>
+        </div>
+
+        <!-- FORMULARIO ULTRA-ÁGIL -->
+        <form id="colaboracionForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6" novalidate>
+
+            <!-- CONFIGURACIÓN DE WEB3FORMS -->
+            <input type="hidden" name="access_key" value="776bc1b9-fbc3-4709-ba2b-a458695ebd4a">
+            <input type="hidden" name="subject" value="Nueva postulación – Redes Sociales – QuieroMoverme">
+            <input type="hidden" name="from_name" value="QuieroMoverme Postulaciones">
+            <input type="hidden" name="redirect" value="https://quieromoverme.com/gracias.html">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1"
+                autocomplete="off">
+
+            <!-- ALERTA DE ERROR -->
+            <div id="mensajeError"
+                class="hidden bg-rose-50 border border-rose-300 text-rose-800 p-4 rounded-2xl text-xs sm:text-sm leading-relaxed space-y-1">
+                <p class="font-bold flex items-center gap-2 text-rose-900">
+                    <span>⚠️</span> Ocurrió un inconveniente al enviar
+                </p>
+                <p id="errorTexto">Por favor verificá tu conexión e intentá nuevamente, o escribinos directamente por
+                    WhatsApp.</p>
+            </div>
+
+            <!-- ============================================== -->
+            <!-- BLOQUE 1: TUS DATOS DE CONTACTO -->
+            <!-- ============================================== -->
+            <section
+                class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-slate-200/90 shadow-sm space-y-4">
+                <div class="border-b border-slate-100 pb-3 flex items-center gap-2">
+                    <span class="text-xl">👤</span>
+                    <h2 class="text-base sm:text-lg font-black text-slate-900">
+                        1. Tus datos de contacto
+                    </h2>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <!-- 1. Nombre y apellido -->
+                    <div class="sm:col-span-2">
+                        <label for="nombre" class="block text-xs font-bold text-slate-700 mb-1">
+                            1. Nombre y apellido <span class="text-rose-500">*</span>
+                        </label>
+                        <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="100"
+                            autocomplete="name" autocapitalize="words" spellcheck="false"
+                            placeholder="Ej: Valentina Pérez"
+                            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none text-sm transition-all placeholder:text-slate-400 bg-slate-50/50 focus:bg-white"
+                            aria-describedby="nombre-error">
+                        <p id="nombre-error" class="text-xs text-rose-600 mt-1 hidden"></p>
+                    </div>
+
+                    <!-- 2. Correo electrónico -->
+                    <div>
+                        <label for="email" class="block text-xs font-bold text-slate-700 mb-1">
+                            2. Correo electrónico <span class="text-rose-500">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" required maxlength="100"
+                            autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false"
+                            placeholder="tuemail@ejemplo.com"
+                            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none text-sm transition-all placeholder:text-slate-400 bg-slate-50/50 focus:bg-white"
+                            aria-describedby="email-error">
+                        <p id="email-error" class="text-xs text-rose-600 mt-1 hidden"></p>
+                    </div>
+
+                    <!-- 3. Celular / WhatsApp -->
+                    <div>
+                        <label for="celular" class="block text-xs font-bold text-slate-700 mb-1">
+                            3. Celular / WhatsApp <span class="text-rose-500">*</span>
+                        </label>
+                        <input type="tel" id="celular" name="celular" required maxlength="30"
+                            autocomplete="tel" inputmode="tel"
+                            placeholder="Ej: 2284 123456 o +54 9 2284 123456"
+                            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none text-sm transition-all placeholder:text-slate-400 bg-slate-50/50 focus:bg-white"
+                            aria-describedby="celular-error">
+                        <p id="celular-error" class="text-xs text-rose-600 mt-1 hidden"></p>
+                    </div>
+
+                    <!-- 4. Instagram o enlace a tus redes -->
+                    <div class="sm:col-span-2">
+                        <label for="redes" class="block text-xs font-bold text-slate-700 mb-1">
+                            4. Instagram o enlace a tus redes <span class="text-rose-500">*</span>
+                        </label>
+                        <input type="text" id="redes" name="redes" required maxlength="100"
+                            autocomplete="off" autocapitalize="none" spellcheck="false"
+                            placeholder="Ej: @tuusuario o link a tu perfil"
+                            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none text-sm transition-all placeholder:text-slate-400 bg-slate-50/50 focus:bg-white"
+                            aria-describedby="redes-error">
+                        <p class="text-[11px] text-slate-400 mt-1">Nos sirve para conocer tu estilo y cómo te expresás.</p>
+                        <p id="redes-error" class="text-xs text-rose-600 mt-1 hidden"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================== -->
+            <!-- BLOQUE 2: MOTIVACIÓN Y DISPONIBILIDAD -->
+            <!-- ============================================== -->
+            <section
+                class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-slate-200/90 shadow-sm space-y-6">
+                <div class="border-b border-slate-100 pb-3 flex items-center gap-2">
+                    <span class="text-xl">🏃</span>
+                    <h2 class="text-base sm:text-lg font-black text-slate-900">
+                        2. Tu perfil y disponibilidad
+                    </h2>
+                </div>
+
+                <!-- 5. ¿Qué te motiva a sumarte? -->
+                <div>
+                    <span class="block text-sm font-bold text-slate-900 mb-1">
+                        5. ¿Qué te motiva a sumarte? <span class="text-rose-500">*</span>
+                    </span>
+                    <p class="text-xs text-slate-500 mb-3">Elegí la opción que más te represente.</p>
+
+                    <div class="grid sm:grid-cols-2 gap-2.5">
+                        <label class="select-card cursor-pointer">
+                            <input type="radio" name="motivacion" value="Me apasiona el deporte" required
+                                class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Me apasiona el deporte</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="radio" name="motivacion" value="Quiero aportar a mi comunidad" required
+                                class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Quiero aportar a mi comunidad</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="radio" name="motivacion" value="Quiero aprender y ganar experiencia" required
+                                class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Quiero aprender y ganar experiencia</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="radio" name="motivacion" value="Me gusta crear contenido y comunicar" required
+                                class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Me gusta crear contenido y comunicar</span>
+                            </div>
+                        </label>
+                    </div>
+                    <p id="motivacion-error" class="text-xs text-rose-600 mt-2 hidden font-medium"></p>
+                </div>
+
+                <!-- 6. ¿Cuánto tiempo podés dedicarle? -->
+                <div>
+                    <span class="block text-sm font-bold text-slate-900 mb-1">
+                        6. ¿Cuánto tiempo podés dedicarle? <span class="text-rose-500">*</span>
+                    </span>
+                    <p class="text-xs text-slate-500 mb-3">Estimamos aproximadamente 8 horas semanales al inicio.</p>
+
+                    <div class="grid sm:grid-cols-3 gap-2.5">
+                        <label class="select-card cursor-pointer">
+                            <input type="radio" name="disponibilidad" value="8 horas semanales" required
+                                class="sr-only">
+                            <div
+                                class="card-box flex items-center justify-center text-center gap-2 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>8 horas semanales</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="radio" name="disponibilidad" value="Menos de 8 horas" required class="sr-only">
+                            <div
+                                class="card-box flex items-center justify-center text-center gap-2 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Menos de 8 horas</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="radio" name="disponibilidad" value="Necesito conversarlo" required
+                                class="sr-only">
+                            <div
+                                class="card-box flex items-center justify-center text-center gap-2 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Necesito conversarlo</span>
+                            </div>
+                        </label>
+                    </div>
+                    <p id="disponibilidad-error" class="text-xs text-rose-600 mt-2 hidden font-medium"></p>
+                </div>
+            </section>
+
+            <!-- ============================================== -->
+            <!-- BLOQUE 3: REDES Y DINÁMICA DE TRABAJO -->
+            <!-- ============================================== -->
+            <section
+                class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 border border-slate-200/90 shadow-sm space-y-6">
+                <div class="border-b border-slate-100 pb-3 flex items-center gap-2">
+                    <span class="text-xl">💡</span>
+                    <h2 class="text-base sm:text-lg font-black text-slate-900">
+                        3. Redes y forma de trabajo
+                    </h2>
+                </div>
+
+                <!-- 7. ¿Qué experiencia tenés? -->
+                <div>
+                    <span class="block text-sm font-bold text-slate-900 mb-1">
+                        7. ¿Qué experiencia tenés? <span class="text-rose-500">*</span>
+                    </span>
+                    <p class="text-xs text-slate-500 mb-3">No es necesario contar con trayectoria profesional formal.
+                    </p>
+
+                    <div class="space-y-2">
+                        <label class="select-card cursor-pointer block">
+                            <input type="radio" name="experiencia_redes" value="Gestioné redes de un proyecto o negocio"
+                                required class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Gestioné redes de un proyecto o negocio</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer block">
+                            <input type="radio" name="experiencia_redes" value="Manejo mis propias redes" required
+                                class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Manejo mis propias redes</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer block">
+                            <input type="radio" name="experiencia_redes" value="Estoy empezando, pero quiero aprender"
+                                required class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Estoy empezando, pero quiero aprender</span>
+                            </div>
+                        </label>
+                    </div>
+                    <p id="experiencia_redes-error" class="text-xs text-rose-600 mt-2 hidden font-medium"></p>
+                </div>
+
+                <!-- 8. ¿Qué herramientas manejás? (Checkboxes rápidos) -->
+                <div>
+                    <span class="block text-sm font-bold text-slate-900 mb-1">
+                        8. ¿Qué herramientas manejás? <span class="text-xs font-normal text-slate-500">(Podés marcar
+                            varias)</span>
+                    </span>
+                    <p class="text-xs text-slate-500 mb-3">Herramientas que conocés o que te gustaría aprender.</p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="herramientas[]" value="Canva" class="sr-only">
+                            <div
+                                class="card-box flex items-center justify-center text-center gap-2 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Canva</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="herramientas[]" value="Video" class="sr-only">
+                            <div
+                                class="card-box flex items-center justify-center text-center gap-2 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Video</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="herramientas[]" value="Instagram" class="sr-only">
+                            <div
+                                class="card-box flex items-center justify-center text-center gap-2 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Instagram</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="herramientas[]" value="Fotografía" class="sr-only">
+                            <div
+                                class="card-box flex items-center justify-center text-center gap-2 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Fotografía</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="herramientas[]" value="Estadísticas" class="sr-only">
+                            <div
+                                class="card-box flex items-center justify-center text-center gap-2 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Estadísticas</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="herramientas[]" value="Quiero aprender" class="sr-only">
+                            <div
+                                class="card-box flex items-center justify-center text-center gap-2 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Quiero aprender</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 9. ¿En qué te gustaría participar? -->
+                <div>
+                    <span class="block text-sm font-bold text-slate-900 mb-1">
+                        9. ¿En qué te gustaría participar? <span class="text-xs font-normal text-slate-500">(Podés
+                            marcar varias)</span>
+                    </span>
+                    <p class="text-xs text-slate-500 mb-3">Tareas en las que sentís que podés aportar o experimentar.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-2">
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="areas_interes[]" value="Crear contenido" class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Crear contenido</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="areas_interes[]" value="Publicar y gestionar" class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Publicar y gestionar</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="areas_interes[]" value="Responder consultas" class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Responder consultas</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="areas_interes[]" value="Contactar clubes y profes"
+                                class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Contactar clubes y profes</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="areas_interes[]" value="Cubrir eventos" class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Cubrir eventos</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer">
+                            <input type="checkbox" name="areas_interes[]" value="Planificar y analizar resultados"
+                                class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-white hover:border-sky-300 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="check-dot w-4 h-4 rounded border border-slate-300 flex items-center justify-center text-[10px] shrink-0">✓</span>
+                                <span>Planificar y analizar resultados</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 10. ¿Cómo te gustaría trabajar? -->
+                <div>
+                    <span class="block text-sm font-bold text-slate-900 mb-1">
+                        10. ¿Cómo te gustaría trabajar? <span class="text-rose-500">*</span>
+                    </span>
+                    <p class="text-xs text-slate-500 mb-3">Tu expectativa sobre el rol y la coordinación.</p>
+
+                    <div class="space-y-2">
+                        <label class="select-card cursor-pointer block">
+                            <input type="radio" name="evolucion_colaboracion"
+                                value="Construir juntos y después ganar autonomía" required class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Construir juntos y después ganar autonomía</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer block">
+                            <input type="radio" name="evolucion_colaboracion" value="Compartir siempre la gestión"
+                                required class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Compartir siempre la gestión</span>
+                            </div>
+                        </label>
+
+                        <label class="select-card cursor-pointer block">
+                            <input type="radio" name="evolucion_colaboracion" value="Colaborar en tareas puntuales"
+                                required class="sr-only">
+                            <div
+                                class="card-box flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 bg-white hover:border-sky-300 hover:bg-sky-50/30 transition-all text-xs sm:text-sm font-medium">
+                                <span
+                                    class="radio-dot w-4 h-4 rounded-full border-2 border-slate-300 shrink-0 transition-all"></span>
+                                <span>Colaborar en tareas puntuales</span>
+                            </div>
+                        </label>
+                    </div>
+                    <p id="evolucion_colaboracion-error" class="text-xs text-rose-600 mt-2 hidden font-medium"></p>
+                </div>
+
+                <!-- PREGUNTA ABIERTA OPCIONAL (ÚNICA) -->
+                <div class="pt-2 border-t border-slate-100">
+                    <div class="flex items-center justify-between gap-2 mb-1">
+                        <label for="idea_inicial" class="block text-sm font-bold text-slate-900">
+                            ¿Qué contenido publicarías primero para QuieroMoverme? <span
+                                class="text-xs font-normal text-slate-400">(Opcional)</span>
+                        </label>
+                        <span id="ideaContador" class="text-[11px] font-semibold text-slate-400 shrink-0">0 / 400</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-2">
+                        Puede ser un reel, una historia, una entrevista, un post de presentación o cualquier idea que te
+                        entusiasme.
+                    </p>
+                    <textarea id="idea_inicial" name="idea_inicial" rows="2" maxlength="400"
+                        placeholder="Contanos tu idea o dejalo en blanco si preferís conversarlo..."
+                        class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none text-sm transition-all placeholder:text-slate-400 bg-slate-50/50 focus:bg-white resize-y"></textarea>
+                </div>
+            </section>
+
+            <!-- AVISO DE PRIVACIDAD -->
+            <p class="text-xs text-slate-500 text-center px-4">
+                🔒 Tus datos se utilizarán únicamente para evaluar esta propuesta y contactarte. No se comparten con
+                terceros.
+            </p>
+
+            <!-- BOTÓN PRINCIPAL DE ENVÍO -->
+            <div class="pt-1">
+                <button type="submit" id="submitBtn"
+                    class="w-full py-4 px-6 bg-sky-600 hover:bg-sky-700 active:bg-sky-800 text-white font-extrabold text-base sm:text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed group">
+                    <span id="btnText">Enviar postulación 🚀</span>
+                    <svg id="btnSpinner" class="hidden animate-spin h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-300 mt-16">
+
+        <div class="max-w-6xl mx-auto px-6 py-12">
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+
+                <div>
+                    <h2 class="text-2xl font-black text-white">
+                        QuieroMoverme
+                    </h2>
+
+                    <p class="text-slate-400 text-sm mt-3 max-w-md leading-relaxed">
+                        Plataforma digital que conecta a las personas con el deporte,
+                        el movimiento y las oportunidades de Olavarría y la zona.
+                    </p>
+                </div>
+
+
+                <div class="flex flex-col md:items-end gap-4">
+
+                    <a href="https://www.instagram.com/quieromoverme.ok/" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-white transition">
+                        📸 @quieromoverme.ok
+                    </a>
+
+                    <a href="mailto:contacto@quieromoverme.com" class="hover:text-white transition">
+                        ✉️ contacto@quieromoverme.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="border-t border-slate-800 mt-10 pt-6 text-center text-xs text-slate-500">
+
+                <p>
+                    © 2026 QuieroMoverme · Olavarría, Buenos Aires 🇦🇷
+                </p>
+
+                <p class="mt-2">
+                    Hecho con ❤️ por
+                    <strong class="text-slate-400">Seba Rosende</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/5492284712094?text=Hola%2C%20quer%C3%ADa%20consultarte%20sobre%20la%20convocatoria%20para%20redes%20de%20QuieroMoverme"
+        target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp" title="Consultar por WhatsApp"
+        class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 p-3 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-xl hover:scale-110 active:scale-95 transition-all">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="currentColor"
+            aria-hidden="true">
+            <path
+                d="M16.003 2.667C8.637 2.667 2.667 8.637 2.667 16c0 2.347.634 4.608 1.837 6.587L2.667 29.333l6.944-1.82A13.263 13.263 0 0 0 16.003 29.333c7.366 0 13.33-5.97 13.33-13.333S23.37 2.667 16.003 2.667zm0 24.267a11.033 11.033 0 0 1-5.635-1.548l-.403-.24-4.122 1.08 1.1-4.017-.263-.413A11.007 11.007 0 0 1 4.96 16c0-6.09 4.953-11.04 11.043-11.04S27.044 9.91 27.044 16s-4.953 11.04-11.04 11.04v-.107zm6.063-8.263c-.333-.167-1.967-.97-2.27-1.08-.304-.113-.524-.167-.744.167-.22.333-.854 1.08-1.047 1.3-.193.22-.387.247-.72.08-.333-.167-1.407-.52-2.68-1.657-.99-.883-1.66-1.973-1.853-2.307-.193-.333-.02-.513.145-.68.15-.148.333-.387.5-.58.167-.193.22-.333.333-.553.113-.22.057-.413-.027-.58-.083-.167-.744-1.793-1.02-2.457-.27-.643-.543-.557-.744-.567-.193-.007-.413-.01-.633-.01s-.58.08-.883.387c-.304.307-1.16 1.133-1.16 2.763 0 1.63 1.187 3.203 1.353 3.423.167.22 2.337 3.567 5.663 4.997.793.34 1.41.543 1.893.697.795.253 1.52.217 2.093.132.638-.095 1.967-.804 2.243-1.58.277-.777.277-1.443.194-1.58-.083-.14-.304-.22-.637-.387z" />
+        </svg>
+    </a>
+
+    <!-- SCRIPT DE ENVÍO ASÍNCRONO Y MANEJO DE ESTADOS -->
+    <script>
+        (function () {
+            const form = document.getElementById('colaboracionForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnSpinner = document.getElementById('btnSpinner');
+            const mensajeExito = document.getElementById('mensajeExito');
+            const mensajeError = document.getElementById('mensajeError');
+            const errorTexto = document.getElementById('errorTexto');
+
+            if (!form) return;
+
+            // Elementos de campos individuales
+            const nombreInput = document.getElementById('nombre');
+            const nombreError = document.getElementById('nombre-error');
+
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+
+            const celularInput = document.getElementById('celular');
+            const celularError = document.getElementById('celular-error');
+
+            const redesInput = document.getElementById('redes');
+            const redesError = document.getElementById('redes-error');
+
+            const ideaTextarea = document.getElementById('idea_inicial');
+            const ideaContador = document.getElementById('ideaContador');
+
+            // 1. Contador de caracteres en tiempo real para pregunta opcional
+            if (ideaTextarea && ideaContador) {
+                ideaTextarea.addEventListener('input', function () {
+                    const len = this.value.length;
+                    ideaContador.textContent = `${len} / 400`;
+                    if (len >= 380) {
+                        ideaContador.classList.add('text-amber-600');
+                    } else {
+                        ideaContador.classList.remove('text-amber-600');
+                    }
+                });
+            }
+
+            // 2. Funciones de ayuda para mostrar y limpiar errores
+            function setFieldError(inputEl, errorEl, message) {
+                if (inputEl) {
+                    inputEl.classList.add('input-error');
+                    inputEl.setAttribute('aria-invalid', 'true');
+                }
+                if (errorEl) {
+                    errorEl.textContent = message;
+                    errorEl.classList.remove('hidden');
+                }
+            }
+
+            function clearFieldError(inputEl, errorEl) {
+                if (inputEl) {
+                    inputEl.classList.remove('input-error');
+                    inputEl.setAttribute('aria-invalid', 'false');
+                }
+                if (errorEl) {
+                    errorEl.textContent = '';
+                    errorEl.classList.add('hidden');
+                }
+            }
+
+            // 3. Reglas de validación individuales
+            function checkNombre(val) {
+                const trimmed = (val || '').trim();
+                if (!trimmed) {
+                    return 'Por favor ingresá tu nombre y apellido.';
+                }
+                if (trimmed.length < 2) {
+                    return 'El nombre debe tener al menos 2 caracteres.';
+                }
+                if (trimmed.length > 100) {
+                    return 'El nombre no puede superar los 100 caracteres.';
+                }
+                // Permitir letras, tildes, ñ, apóstrofes, guiones y espacios
+                const regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ'’\-\s.]+$/;
+                if (!regex.test(trimmed)) {
+                    return 'El nombre solo puede contener letras, tildes, guiones y espacios.';
+                }
+                const letterCount = (trimmed.match(/[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]/g) || []).length;
+                if (letterCount < 2) {
+                    return 'Por favor ingresá un nombre y apellido válido.';
+                }
+                return '';
+            }
+
+            function checkEmail(val) {
+                const trimmed = (val || '').trim();
+                if (!trimmed) {
+                    return 'Por favor ingresá tu correo electrónico.';
+                }
+                // Formato de email válido estándar
+                const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+                if (!regex.test(trimmed)) {
+                    return 'Ingresá un correo electrónico válido (ej: nombre@correo.com).';
+                }
+                return '';
+            }
+
+            function checkCelular(val) {
+                const trimmed = (val || '').trim();
+                if (!trimmed) {
+                    return 'Por favor ingresá tu número de celular o WhatsApp.';
+                }
+                // Permitir dígitos, espacios, guiones, paréntesis y signo más
+                if (/[^0-9+\s\-().]/.test(trimmed)) {
+                    return 'El celular solo debe contener números, guiones y código de área.';
+                }
+                const digitsOnly = trimmed.replace(/\D/g, '');
+                if (digitsOnly.length < 8) {
+                    return 'El número parece incompleto (ingresá al menos 8 dígitos con código de área).';
+                }
+                if (digitsOnly.length > 15) {
+                    return 'El número ingresado supera la cantidad de dígitos permitida.';
+                }
+                return '';
+            }
+
+            function checkRedes(val) {
+                const trimmed = (val || '').trim();
+                if (!trimmed) {
+                    return 'Por favor ingresá tu usuario de Instagram o enlace a tus redes.';
+                }
+                if (trimmed.length > 100) {
+                    return 'El usuario o enlace no puede superar los 100 caracteres.';
+                }
+                // Si es un enlace o URL
+                if (trimmed.includes('/') || trimmed.startsWith('http') || trimmed.startsWith('www.')) {
+                    const urlRegex = /^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/[^\s]*)?$/i;
+                    if (!urlRegex.test(trimmed)) {
+                        return 'Ingresá un enlace válido (ej: https://instagram.com/tuusuario).';
+                    }
+                } else {
+                    // Es un usuario: @opcional seguido de letras, números, puntos y guiones bajos
+                    const cleanUser = trimmed.startsWith('@') ? trimmed.slice(1) : trimmed;
+                    const userRegex = /^[a-zA-Z0-9._]{1,30}$/;
+                    if (!userRegex.test(cleanUser)) {
+                        return 'Ingresá un usuario válido (ej: @tuusuario) o el enlace a tu perfil.';
+                    }
+                }
+                return '';
+            }
+
+            // 4. Validar en blur (al salir del campo) y limpiar al escribir
+            function setupInputValidation(inputEl, errorEl, checkFn) {
+                if (!inputEl) return;
+
+                inputEl.addEventListener('blur', function () {
+                    const err = checkFn(this.value);
+                    if (err) {
+                        setFieldError(inputEl, errorEl, err);
+                    } else {
+                        clearFieldError(inputEl, errorEl);
+                    }
+                });
+
+                inputEl.addEventListener('input', function () {
+                    if (inputEl.classList.contains('input-error')) {
+                        const err = checkFn(this.value);
+                        if (!err) {
+                            clearFieldError(inputEl, errorEl);
+                        }
+                    }
+                });
+            }
+
+            setupInputValidation(nombreInput, nombreError, checkNombre);
+            setupInputValidation(emailInput, emailError, checkEmail);
+            setupInputValidation(celularInput, celularError, checkCelular);
+            setupInputValidation(redesInput, redesError, checkRedes);
+
+            // 5. Limpiar errores de grupos de radios al cambiar de opción
+            const radioGroups = ['motivacion', 'disponibilidad', 'experiencia_redes', 'evolucion_colaboracion'];
+            radioGroups.forEach(groupName => {
+                const radios = form.querySelectorAll(`input[name="${groupName}"]`);
+                const errEl = document.getElementById(`${groupName}-error`);
+                radios.forEach(radio => {
+                    radio.addEventListener('change', function () {
+                        if (errEl) {
+                            errEl.textContent = '';
+                            errEl.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // 6. Validación completa al enviar el formulario
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                if (mensajeError) mensajeError.classList.add('hidden');
+
+                let firstInvalidEl = null;
+
+                // Validar Nombre
+                const nombreVal = (nombreInput ? nombreInput.value : '').trim();
+                if (nombreInput) nombreInput.value = nombreVal;
+                const errNombre = checkNombre(nombreVal);
+                if (errNombre) {
+                    setFieldError(nombreInput, nombreError, errNombre);
+                    if (!firstInvalidEl) firstInvalidEl = nombreInput;
+                } else {
+                    clearFieldError(nombreInput, nombreError);
+                }
+
+                // Validar Email
+                const emailVal = (emailInput ? emailInput.value : '').trim();
+                if (emailInput) emailInput.value = emailVal;
+                const errEmail = checkEmail(emailVal);
+                if (errEmail) {
+                    setFieldError(emailInput, emailError, errEmail);
+                    if (!firstInvalidEl) firstInvalidEl = emailInput;
+                } else {
+                    clearFieldError(emailInput, emailError);
+                }
+
+                // Validar Celular
+                const celularVal = (celularInput ? celularInput.value : '').trim();
+                if (celularInput) celularInput.value = celularVal;
+                const errCelular = checkCelular(celularVal);
+                if (errCelular) {
+                    setFieldError(celularInput, celularError, errCelular);
+                    if (!firstInvalidEl) firstInvalidEl = celularInput;
+                } else {
+                    clearFieldError(celularInput, celularError);
+                }
+
+                // Validar Redes
+                const redesVal = (redesInput ? redesInput.value : '').trim();
+                if (redesInput) redesInput.value = redesVal;
+                const errRedes = checkRedes(redesVal);
+                if (errRedes) {
+                    setFieldError(redesInput, redesError, errRedes);
+                    if (!firstInvalidEl) firstInvalidEl = redesInput;
+                } else {
+                    clearFieldError(redesInput, redesError);
+                }
+
+                // Validar preguntas de selección única obligatorias
+                radioGroups.forEach(groupName => {
+                    const selected = form.querySelector(`input[name="${groupName}"]:checked`);
+                    const errEl = document.getElementById(`${groupName}-error`);
+                    if (!selected) {
+                        if (errEl) {
+                            errEl.textContent = 'Por favor seleccioná una opción.';
+                            errEl.classList.remove('hidden');
+                        }
+                        if (!firstInvalidEl) {
+                            firstInvalidEl = form.querySelector(`input[name="${groupName}"]`);
+                        }
+                    } else if (errEl) {
+                        errEl.textContent = '';
+                        errEl.classList.add('hidden');
+                    }
+                });
+
+                // Si hay campos inválidos, hacer foco y scroll suave al primero
+                if (firstInvalidEl) {
+                    firstInvalidEl.focus();
+                    firstInvalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    return;
+                }
+
+                // Preparar envío
+                submitBtn.disabled = true;
+                btnText.textContent = 'Enviando postulación...';
+                btnSpinner.classList.remove('hidden');
+
+                const formData = new FormData(form);
+                const payload = {};
+                const arrayFields = {};
+
+                formData.forEach((value, key) => {
+                    if (key === 'botcheck' && !value) return;
+
+                    const isArray = key.endsWith('[]');
+                    const cleanKey = isArray ? key.slice(0, -2) : key;
+
+                    if (isArray) {
+                        if (!arrayFields[cleanKey]) arrayFields[cleanKey] = [];
+                        // Evitar opciones duplicadas
+                        if (!arrayFields[cleanKey].includes(value)) {
+                            arrayFields[cleanKey].push(value);
+                        }
+                    } else {
+                        payload[cleanKey] = typeof value === 'string' ? value.trim() : value;
+                    }
+                });
+
+                // Unir selecciones múltiples con comas
+                for (const [key, vals] of Object.entries(arrayFields)) {
+                    payload[key] = vals.join(', ');
+                }
+
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: JSON.stringify(payload),
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok && result.success) {
+                        form.classList.add('hidden');
+                        mensajeExito.classList.remove('hidden');
+                        mensajeExito.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        throw new Error(result.message || 'No pudimos procesar el envío.');
+                    }
+                } catch (error) {
+                    console.error('Error al enviar formulario:', error);
+                    if (mensajeError) {
+                        if (errorTexto) {
+                            errorTexto.textContent = error.message || 'Ocurrió un problema de conexión. Por favor intentá nuevamente o contactanos directamente por WhatsApp.';
+                        }
+                        mensajeError.classList.remove('hidden');
+                        mensajeError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                } finally {
+                    if (!form.classList.contains('hidden')) {
+                        submitBtn.disabled = false;
+                        btnText.textContent = 'Enviar postulación 🚀';
+                        btnSpinner.classList.add('hidden');
+                    }
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
